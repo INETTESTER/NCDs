@@ -3,18 +3,43 @@ import { sleep } from 'k6';
 import { error_check } from '../check/check.js';
 import { scenario } from 'k6/execution';
 
-import { ran } from '../api/script.js';
-import { callback_scb } from '../api/getJson.js';
+import { ดึงข้อมูลการส่งตัวภายในระบบNCDs } from '../api/ดึงข้อมูลการส่งตัวภายในระบบNCDs.js';
+import { ดึงข้อมูลทะเบียนบุคคลทั้งหน่วยบริการ } from '../api/ดึงข้อมูลทะเบียนบุคคลทั้งหน่วยบริการ.js';
+import { ดึงข้อมูลVisitทั้งหน่วยบริการ } from '../api/ดึงข้อมูลVisitทั้งหน่วยบริการ.js';
+import { ดึงข้อมูลการนัดหมายอบรมในหน่วยบริการ } from '../api/ดึงข้อมูลการนัดหมายอบรมในหน่วยบริการ.js';
+import { ดึงข้อมูลผลประเมินสุขภาพ } from '../api/ดึงข้อมูลผลประเมินสุขภาพ.js';
+import { เพิ่มทะเบียนบุคคลด้วยExcel } from '../api/เพิ่มทะเบียนบุคคลด้วยExcel.js';
+import { Dropdownรายชื่อทะเบียนบุคคลในหน่วยบริการ } from '../api/Dropdownรายชื่อทะเบียนบุคคลในหน่วยบริการ.js';
+import { สร้างVisit } from '../api/สร้างVisit.js';
+import { ดึงข้อมูลVisitรายบุคคล } from '../api/ดึงข้อมูลVisitรายบุคคล.js';
+import { สร้างแบบประเมินสุขภาพ } from '../api/สร้างแบบประเมินสุขภาพ.js';
+import { Dashboardแสดงภาพรวมสุขภาพแต่ละแบบประเมิน } from '../api/Dashboardแสดงภาพรวมสุขภาพแต่ละแบบประเมิน.js';
+import { สร้างนัดหมายการอบรม } from '../api/สร้างนัดหมายการอบรม.js';
+import { สร้างเอกสารการส่งตัว } from '../api/สร้างเอกสารการส่งตัว.js';
 
 
 
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  response = ran()
-  //response = callback_scb(scenario)
+  //====================== API Get ข้อมูล ==========================//
+  response = ดึงข้อมูลการส่งตัวภายในระบบNCDs()
+  // response = ดึงข้อมูลทะเบียนบุคคลทั้งหน่วยบริการ()
+  // response = ดึงข้อมูลVisitทั้งหน่วยบริการ()
+  // response = ดึงข้อมูลการนัดหมายอบรมในหน่วยบริการ()
+  // response = ดึงข้อมูลผลประเมินสุขภาพ()
 
-  
+  //====================== API ไหลตาม Flow ปกติ ==========================//
+  //response = เพิ่มทะเบียนบุคคลด้วยExcel()
+  //response = Dropdownรายชื่อทะเบียนบุคคลในหน่วยบริการ()
+  //response = สร้างVisit()
+  //response = ดึงข้อมูลVisitรายบุคคล()
+  //response = สร้างแบบประเมินสุขภาพ()
+  //response = Dashboardแสดงภาพรวมสุขภาพแต่ละแบบประเมิน()
+  //response = สร้างนัดหมายการอบรม()
+  //response = สร้างเอกสารการส่งตัว()
+
+
   error_check(response);
   sleep(1)
 }
