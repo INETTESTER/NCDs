@@ -16,6 +16,7 @@ import { สร้างแบบประเมินสุขภาพ } from 
 import { Dashboardแสดงภาพรวมสุขภาพแต่ละแบบประเมิน } from '../api/Dashboardแสดงภาพรวมสุขภาพแต่ละแบบประเมิน.js';
 import { สร้างนัดหมายการอบรม } from '../api/สร้างนัดหมายการอบรม.js';
 import { สร้างเอกสารการส่งตัว } from '../api/สร้างเอกสารการส่งตัว.js';
+import { newapi } from '../api/newapi.js';
 
 
 
@@ -23,16 +24,17 @@ import { สร้างเอกสารการส่งตัว } from '..
 
 export default function () {    //เรียกใช้ API ใน export default function
   //====================== API Get ข้อมูล ==========================//
-  response = ดึงข้อมูลการส่งตัวภายในระบบNCDs()
+  // response = ดึงข้อมูลการส่งตัวภายในระบบNCDs()
   // response = ดึงข้อมูลทะเบียนบุคคลทั้งหน่วยบริการ()
   // response = ดึงข้อมูลVisitทั้งหน่วยบริการ()
   // response = ดึงข้อมูลการนัดหมายอบรมในหน่วยบริการ()
   // response = ดึงข้อมูลผลประเมินสุขภาพ()
+  // response = newapi()
 
   //====================== API ไหลตาม Flow ปกติ ==========================//
   //response = เพิ่มทะเบียนบุคคลด้วยExcel()
   //response = Dropdownรายชื่อทะเบียนบุคคลในหน่วยบริการ()
-  //response = สร้างVisit()
+  response = สร้างVisit()
   //response = ดึงข้อมูลVisitรายบุคคล()
   //response = สร้างแบบประเมินสุขภาพ()
   //response = Dashboardแสดงภาพรวมสุขภาพแต่ละแบบประเมิน()
