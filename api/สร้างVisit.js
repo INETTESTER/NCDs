@@ -5,7 +5,7 @@ export function สร้างVisit() {
     const url = 'https://ncds-prevention.buddy-care.org/service/api/v1/visit';
 
     const payload = JSON.stringify({
-        patient_id: 'be900336-0445-4733-b503-8f275608e3f3'
+        patient_id: '6cc01b78-0882-42ae-a76b-75f9e0f58980'
     });
 
     const params = {
