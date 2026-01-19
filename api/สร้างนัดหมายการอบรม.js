@@ -5,7 +5,7 @@ export function สร้างนัดหมายการอบรม() {
     const url = 'https://ncds-prevention.buddy-care.org/service/api/v1/trainings';
 
     const payload = JSON.stringify({
-        "patient_id": "ad2c9578-2cdc-49e3-80b0-98b133ca86f0",
+        "patient_id": "6cc01b78-0882-42ae-a76b-75f9e0f58980",
         "appointment_type": "recurring",
         "recurring": {
             "start_time": "15:00",
