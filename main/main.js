@@ -30,13 +30,13 @@ export default function () {    //เรียกใช้ API ใน export def
   // response = ดึงข้อมูลผลประเมินสุขภาพ()
 
   //====================== API ไหลตาม Flow ปกติ ==========================//
-  //response = เพิ่มทะเบียนบุคคลด้วยExcel()
+  response = เพิ่มทะเบียนบุคคลด้วยExcel()
   //response = Dropdownรายชื่อทะเบียนบุคคลในหน่วยบริการ()
   //response = สร้างVisit()
   //response = ดึงข้อมูลVisitรายบุคคล()
   //response = สร้างแบบประเมินสุขภาพ()
   //response = Dashboardแสดงภาพรวมสุขภาพแต่ละแบบประเมิน()
-  response = สร้างนัดหมายการอบรม()
+  //response = สร้างนัดหมายการอบรม()
   //response = สร้างเอกสารการส่งตัว()
 
 
