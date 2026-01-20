@@ -6,8 +6,8 @@
 ##########################################################################
                      API="12_trainings" 
                      google_sheet="https://docs.google.com/spreadsheets/d/1Rku2eIQ99P14P5827glysU3Ys88oxQt8W9O_nnlrA7g/edit?gid=303761516#gid=303761516" 
-                     id="13"                 #เปลี่ยน id ทุกครั้งที่ยิง
-                     user="3000";            #จำนวนผู้ใช้งาน
+                     id="20"                 #เปลี่ยน id ทุกครั้งที่ยิง
+                     user="3400";            #จำนวนผู้ใช้งาน
                      duration="1";         #วินาที
                      scenario="1"           #scenario="1" ยิงเเบบกำหนด request (duration ได้แค่ 1 วินาที)
                      cid="1"                #scenario="2" ยิงเเบบกำหนด VUs  (กำหนดว่า user x คน ใช้ระบบ x วินาที)
